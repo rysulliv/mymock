@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^http://localhotdeals.aws.af.cm$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.http://localhotdeals.aws.af.cm$
+RewriteCond %{REQUEST_URI} !public/
+RewriteRule (.*) /public/$1 [L]
